@@ -1,6 +1,6 @@
 {
   "name": "postcss-yu-gothic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Postcss plugin for Yu Gothic",
   "main": "yu-gothic.js",
   "repository": "https://github.com/nju33/postcss-yu-gothic",
