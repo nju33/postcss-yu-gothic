@@ -1,0 +1,43 @@
+{
+  "name": "postcss-yu-gothic",
+  "version": "0.0.0",
+  "description": "Postcss plugin for Yu Gothic",
+  "main": "yu-gothic.js",
+  "repository": "https://github.com/nju33/postcss-yu-gothic",
+  "author": "nju33 <nju33.ki@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "transform": "node -r babel-register example/transform.js",
+    "example": "yarn transform && chokidar '+(example|lib|test)/**/*.+(html|js|css)' -c 'yarn transform'",
+    "prepublish": "NODE_ENV=production babel lib/yu-gothic.js -o ./yu-gothic.js",
+    "postpublish": "rm ./yu-gothic.js",
+    "test": "xo && ava"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-babili": "^0.0.9",
+    "babel-preset-env": "^1.1.1",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "xo": "^0.17.1"
+  },
+  "ava": {
+    "files": [
+      "test/spec/**/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "xo": {
+    "space": 2,
+    "ignores": [
+      "yu-gothic.js"
+    ]
+  },
+  "dependencies": {
+    "postcss": "^5.2.6"
+  }
+}

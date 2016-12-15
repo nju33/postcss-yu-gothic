@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "4"
+      }
+    }]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "4"
+          }
+        }],
+        "babili"
+      ]
+    }
+  }
+}
