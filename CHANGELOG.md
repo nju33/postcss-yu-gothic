@@ -1,5 +1,9 @@
+## 0.0.5
+- fixes
+  1. typo of `defaultProp`
+
 ## 0.0.4
-- Fixed
+- Fixes
   1. `indexOf` conditions
 
 ## 0.0.3

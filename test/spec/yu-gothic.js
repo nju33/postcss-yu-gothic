@@ -47,3 +47,13 @@ test('Transform with weight:[\'medium\'] option', t => {
       t.notRegex(result.css, /Yu Gothic Bold/);
     });
 });
+
+test('Transform with weight:[\'bold\'] option', t => {
+  const css = fs.readFileSync(path.resolve(__dirname, '../fixtures/test.css'));
+  postcss([yuGothic({weight: ['bold']})])
+    .process(css)
+    .then(result => {
+      t.notRegex(result.css, /Yu Gothic Medium/);
+      t.regex(result.css, /Yu Gothic Bold/);
+    });
+});
