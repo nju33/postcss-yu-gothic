@@ -5,13 +5,16 @@
 
 ## Motivation
 
-わざわざ游ゴシックについてグーグル検索しなくても、楽にを使いたい  
+わざわざ游ゴシックについてグーグル検索しなくても、楽に使いたい  
 Do not bother to use Google Search for Gothic but want to use it comfortably
 
 このプラグインは[Chromeでも読みやすい游ゴシックを指定する方法](http://qiita.com/RinoTsuka/items/1e7b3ca1325e704bbc41)を参照して作られました。  
 This plugin was created with reference to [link](http://qiita.com/RinoTsuka/items/1e7b3ca1325e704bbc41).
 
 ## Example
+
+最初に現れた`Yu Gothic`を値に持ったセレクタの前に`@font-face`が挿入されます。  
+`@Font-face` is inserted before the selector whose value is` Yu Gothic` which first appeared.
 
 前...  
 Before...
@@ -64,7 +67,7 @@ $ npm i --save-dev postcss-yu-gothic
 ## Transform with The [Postcss](https://github.com/postcss/postcss)
 
 ```js
-import yuGothic from '../lib/yu-gothic';
+import yuGothic from 'postcss-yu-gothic';
 postcss([yuGothic])
   .process(cssContent)
   .then(result => {
