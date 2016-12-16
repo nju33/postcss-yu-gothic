@@ -1,3 +1,7 @@
+## 0.0.4
+- Fixed
+  1. `indexOf` conditions
+
 ## 0.0.3
 - Fixes
   1. `module.exports = yuGothic.default`
