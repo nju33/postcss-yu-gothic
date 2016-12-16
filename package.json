@@ -10,7 +10,7 @@
     "transform": "node -r babel-register example/transform.js",
     "example": "yarn transform && chokidar '+(example|lib|test)/**/*.+(html|js|css)' -c 'yarn transform'",
     "prepublish": "mkdir -p dist/; NODE_ENV=production babel lib/yu-gothic.js -o dist/yu-gothic.js",
-    "postpublish": "rm ./yu-gothic.js",
+    "postpublish": "rm -rf ./dist",
     "test": "xo && ava"
   },
   "devDependencies": {
